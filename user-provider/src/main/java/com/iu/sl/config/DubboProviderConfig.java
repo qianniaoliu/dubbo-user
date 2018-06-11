@@ -1,11 +1,9 @@
 package com.iu.sl.config;
 
-import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.ProtocolConfig;
-import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
-import org.springframework.context.annotation.Bean;
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubboConfig;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @Description:
@@ -13,10 +11,12 @@ import org.springframework.context.annotation.Configuration;
  * @CreateDate: 2018/5/23 14:52
  */
 @Configuration
+@EnableDubboConfig
+@PropertySource("dubbo.properties")
 @DubboComponentScan("com.iu.sl.provider")
 public class DubboProviderConfig {
 
-    @Bean
+   /* @Bean
     public ApplicationConfig applicationConfig(){
         ApplicationConfig applicationConfig = new ApplicationConfig();
         applicationConfig.setName("dubbo-user-provider");
@@ -26,7 +26,7 @@ public class DubboProviderConfig {
     @Bean
     public RegistryConfig registryConfig(){
         RegistryConfig registryConfig = new RegistryConfig();
-        registryConfig.setAddress("192.168.28.121:2181");
+        registryConfig.setAddress("192.168.2.129:2181");
         registryConfig.setProtocol("zookeeper");
         return registryConfig;
     }
@@ -35,7 +35,8 @@ public class DubboProviderConfig {
     public ProtocolConfig protocolConfig(){
         ProtocolConfig protocolConfig = new ProtocolConfig();
         protocolConfig.setName("dubbo");
-        protocolConfig.setPort(20880);
+        protocolConfig.setPort(20881);
+        protocolConfig.setHost("192.168.2.100");
         return protocolConfig;
-    }
+    }*/
 }

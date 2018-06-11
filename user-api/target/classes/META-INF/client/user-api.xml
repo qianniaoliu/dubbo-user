@@ -10,6 +10,6 @@
                 http://www.springframework.org/schema/context
                 http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
-    <dubbo:reference id="userService" interface="com.iu.sl.api.UserService" />
+    <!--<dubbo:reference id="userService" interface="com.iu.sl.api.UserService" />-->
 
 </beans>

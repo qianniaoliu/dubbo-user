@@ -1,6 +1,5 @@
 package com.iu.sl.bootstrap;
 
-import com.alibaba.dubbo.container.Main;
 import com.iu.sl.config.DubboProviderConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

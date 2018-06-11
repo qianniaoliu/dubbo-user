@@ -13,6 +13,16 @@ public class SLResponse implements Serializable {
     private String msg;
     private String token;
 
+
+
+    public SLResponse(){}
+
+    public SLResponse(String code, String msg, String token) {
+        this.code = code;
+        this.msg = msg;
+        this.token = token;
+    }
+
     public String getToken() {
         return token;
     }
